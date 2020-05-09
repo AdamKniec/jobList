@@ -1,0 +1,11 @@
+@font-face {
+  font-family: "Spartan-Medium";
+  src: url(../../fonts/Spartan-Medium.ttf);
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: hsl(180, 52%, 96%);
+  font-family: Spartan-Medium;
+  font-size: 13px;
+}

@@ -1,0 +1,48 @@
+.header {
+  height: 100px;
+  background-image: url("../../images/bg-header-desktop.svg");
+  background-size: cover;
+  background-color: hsl(180, 29%, 50%);
+  position: relative;
+  padding: 0 10% 0 10%;
+  .selected-filters-box {
+    background-color: white;
+    height: 60px;
+    max-width: 1000px;
+    position: relative;
+    bottom: -70px;
+    margin: 0 auto;
+    box-shadow: 0px 17px 24px -17px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    div {
+      display: flex;
+      .tag {
+        background-color: hsl(180, 52%, 96%);
+        padding: 5px;
+        color: hsl(180, 29%, 50%);
+        font-size: 14px;
+        border-radius: 5px 0px 0 5px;
+      }
+      button {
+        background-color: hsl(180, 29%, 50%);
+        color: white;
+        border-radius: 0 5px 5px 0;
+        border: none;
+        width: 25px;
+        display: flex;
+        justify-content: center;
+        margin-right: 15px;
+        &:hover {
+          background-color: black;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+//to do - wypozycjonowac jakos po ludzku tego bialego boxa w headerze
+// to do - wywalic stylowanie po tagach

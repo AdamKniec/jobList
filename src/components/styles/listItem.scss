@@ -1,0 +1,102 @@
+@font-face {
+  font-family: "Spartan-Bold";
+  src: url(../../fonts/Spartan-Bold.ttf);
+}
+
+.list-item {
+  display: flex;
+  background-color: #fff;
+  margin-bottom: 20px;
+  padding: 25px;
+  border-radius: 5px;
+  justify-content: space-between;
+  box-shadow: 0px 17px 24px -17px rgba(0, 0, 0, 0.25);
+  &.featured {
+    border-left: 4px solid hsl(180, 29%, 50%);
+  }
+  .job-data-container {
+    display: flex;
+    align-items: center;
+    .logo {
+      align-self: center;
+      height: 60px;
+      width: 60px;
+      margin-right: 20px;
+    }
+    .job-details-box {
+      .company-name,
+      .new-offer {
+        margin-right: 10px;
+      }
+
+      .company-name {
+        color: #63baba;
+        font-family: Spartan-Bold;
+      }
+
+      .featured,
+      .new-offer {
+        padding: 6px 7px 5px 7px;
+        border-radius: 10px;
+        color: #fff;
+        font-size: 10px;
+      }
+      .new-offer {
+        background-color: #63baba;
+      }
+      .featured {
+        background-color: hsl(180, 14%, 20%);
+      }
+      .position-name {
+        margin: 0;
+        padding: 13px 0 13px 0;
+        font-size: 1.2em;
+        font-family: Spartan-Bold;
+        &:hover {
+          color: #63baba;
+          cursor: pointer;
+        }
+      }
+      .job-offer-bottom-details {
+        display: flex;
+        .position-offer-tab {
+          color: rgb(185, 177, 177);
+          &:not(:last-child) {
+            margin-right: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(185, 177, 177);
+            &::after {
+              content: "\A";
+              margin-left: 8px;
+              width: 4px;
+              height: 4px;
+              border-radius: 50%;
+              background: lightgray;
+              display: inline-block;
+            }
+          }
+        }
+      }
+    }
+  }
+  .labels-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .tag {
+      margin-right: 10px;
+      color: hsl(180, 29%, 50%);
+      font-family: Spartan-Bold;
+      background-color: hsl(180, 31%, 95%);
+      padding: 8px;
+      border-radius: 5px;
+      &:hover {
+        background-color: #63baba;
+        color: white;
+        cursor: pointer;
+      }
+    }
+  }
+}

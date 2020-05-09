@@ -1,0 +1,12 @@
+.job-list-container {
+  padding: 0 10%;
+  display: flex;
+  justify-content: center;
+  .job-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    margin-top: 70px;
+    width: 1000px;
+  }
+}
