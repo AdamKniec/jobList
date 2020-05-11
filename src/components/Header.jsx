@@ -1,12 +1,15 @@
 import React from "react";
 import "./styles/header.scss";
 
-const Header = ({ filters, handleRemove }) => {
+const Header = ({ filters, handleRemove, removeAll }) => {
   return (
     <div className="header">
-      <div className="selected-filters-box">
+      <div
+        className={`${
+          filters.length !== 0 ? "selected-filters-box" : "hidden"
+        }`}
+      >
         {filters.map((elem) => {
-          console.log(elem);
           return (
             <div>
               <span className="tag">{elem}</span>
@@ -16,6 +19,9 @@ const Header = ({ filters, handleRemove }) => {
             </div>
           );
         })}
+        <span className="clearAll" onClick={removeAll}>
+          Clear
+        </span>
       </div>
     </div>
   );

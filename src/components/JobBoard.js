@@ -23,6 +23,10 @@ const JobBoard = () => {
     }
   };
 
+  const handleRemoveAll = () => {
+    setFilters([]);
+  };
+
   const handleRemoveClick = (elem) => {
     const filtersAfterRemoval = filters.filter((filter) => filter !== elem);
     setFilters(filtersAfterRemoval);
@@ -30,7 +34,11 @@ const JobBoard = () => {
 
   return (
     <div className="container">
-      <Header filters={filters} handleRemove={handleRemoveClick} />
+      <Header
+        filters={filters}
+        handleRemove={handleRemoveClick}
+        removeAll={handleRemoveAll}
+      />
       <JobList
         handleTagClick={handleTagClick}
         filteredJobList={filteredJobList}

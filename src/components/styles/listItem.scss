@@ -1,3 +1,5 @@
+@import "../styles/mixins.scss";
+@import "../styles/variables.scss";
 @font-face {
   font-family: "Spartan-Bold";
   src: url(../../fonts/Spartan-Bold.ttf);
@@ -5,23 +7,40 @@
 
 .list-item {
   display: flex;
-  background-color: #fff;
+  background-color: $white;
   margin-bottom: 20px;
   padding: 25px;
   border-radius: 5px;
   justify-content: space-between;
-  box-shadow: 0px 17px 24px -17px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 17px 24px -17px $shadow-dark;
+  @include breakpoint(mobile) {
+    flex-direction: column;
+    margin-bottom: 35px;
+  }
   &.featured {
-    border-left: 4px solid hsl(180, 29%, 50%);
+    border-left: 4px solid $dark-green;
   }
   .job-data-container {
     display: flex;
     align-items: center;
+    @include breakpoint(mobile) {
+      position: relative;
+      padding-top: 20px;
+      border-bottom: 1px solid $text-light-grey;
+      padding-bottom: 15px;
+    }
+
     .logo {
       align-self: center;
       height: 60px;
       width: 60px;
       margin-right: 20px;
+      @include breakpoint(mobile) {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: -50px;
+      }
     }
     .job-details-box {
       .company-name,
@@ -30,7 +49,7 @@
       }
 
       .company-name {
-        color: #63baba;
+        color: $main-theme-green;
         font-family: Spartan-Bold;
       }
 
@@ -38,14 +57,14 @@
       .new-offer {
         padding: 6px 7px 5px 7px;
         border-radius: 10px;
-        color: #fff;
+        color: $white;
         font-size: 10px;
       }
       .new-offer {
-        background-color: #63baba;
+        background-color: $main-theme-green;
       }
       .featured {
-        background-color: hsl(180, 14%, 20%);
+        background-color: $background-dark;
       }
       .position-name {
         margin: 0;
@@ -53,27 +72,27 @@
         font-size: 1.2em;
         font-family: Spartan-Bold;
         &:hover {
-          color: #63baba;
+          color: $main-theme-green;
           cursor: pointer;
         }
       }
       .job-offer-bottom-details {
         display: flex;
         .position-offer-tab {
-          color: rgb(185, 177, 177);
+          color: $text-light-grey;
           &:not(:last-child) {
             margin-right: 10px;
             display: flex;
             justify-content: center;
             align-items: center;
-            color: rgb(185, 177, 177);
+            color: $text-light-grey;
             &::after {
               content: "\A";
               margin-left: 8px;
               width: 4px;
               height: 4px;
               border-radius: 50%;
-              background: lightgray;
+              background: $lighter-gray;
               display: inline-block;
             }
           }
@@ -85,16 +104,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    @include breakpoint(mobile) {
+      padding-top: 15px;
+      flex-wrap: wrap;
+    }
     .tag {
       margin-right: 10px;
-      color: hsl(180, 29%, 50%);
+      color: $dark-green;
       font-family: Spartan-Bold;
-      background-color: hsl(180, 31%, 95%);
+      background-color: $light-cyan;
       padding: 8px;
       border-radius: 5px;
+      @include breakpoint(mobile) {
+        margin-bottom: 10px;
+      }
       &:hover {
-        background-color: #63baba;
-        color: white;
+        background-color: $main-theme-green;
+        color: $white;
         cursor: pointer;
       }
     }
