@@ -17,10 +17,10 @@
     flex-direction: column;
     margin-bottom: 35px;
   }
-  &.featured {
+  &.featured-offer {
     border-left: 4px solid $dark-green;
   }
-  .job-data-container {
+  .position-data-container {
     display: flex;
     align-items: center;
     @include breakpoint(mobile) {
@@ -53,7 +53,7 @@
         font-family: Spartan-Bold;
       }
 
-      .featured,
+      .featured-offer,
       .new-offer {
         padding: 6px 7px 5px 7px;
         border-radius: 10px;
@@ -63,7 +63,7 @@
       .new-offer {
         background-color: $main-theme-green;
       }
-      .featured {
+      .featured-offer {
         background-color: $background-dark;
       }
       .position-name {
@@ -78,7 +78,7 @@
       }
       .job-offer-bottom-details {
         display: flex;
-        .position-offer-tab {
+        .bottom-details-item {
           color: $text-light-grey;
           &:not(:last-child) {
             margin-right: 10px;
@@ -100,7 +100,7 @@
       }
     }
   }
-  .labels-container {
+  .tags-container {
     display: flex;
     justify-content: center;
     align-items: center;

@@ -33,7 +33,7 @@ const JobBoard = () => {
   };
 
   return (
-    <div className="container">
+    <>
       <Header
         filters={filters}
         handleRemove={handleRemoveClick}
@@ -43,7 +43,7 @@ const JobBoard = () => {
         handleTagClick={handleTagClick}
         filteredJobList={filteredJobList}
       />
-    </div>
+    </>
   );
 };
 

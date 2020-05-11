@@ -16,23 +16,23 @@ const ListItem = ({ job, handleTagClick }) => {
 
   return (
     <li key={job.id} className={`list-item ${job.featured ? "featured" : ""}`}>
-      <div className="job-data-container">
+      <div className="position-data-container">
         <img src={job.logo} alt="" className="logo" />
         <div className="job-details-box">
           <div>
             <span className="company-name">{job.company}</span>
             {job.new && <span className="new-offer">NEW!</span>}
-            {job.featured && <span className="featured">FEATURED</span>}
+            {job.featured && <span className="featured-offer">FEATURED</span>}
           </div>
           <h3 className="position-name">{job.position}</h3>
           <div className="job-offer-bottom-details">
-            <span className="position-offer-tab">{job.postedAt}</span>
-            <span className="position-offer-tab">{job.contract}</span>
-            <span className="position-offer-tab">{job.location}</span>
+            <span className="bottom-details-item">{job.postedAt}</span>
+            <span className="bottom-details-item">{job.contract}</span>
+            <span className="bottom-details-item">{job.location}</span>
           </div>
         </div>
       </div>
-      <div className="labels-container">
+      <div className="tags-container">
         <span className="tag" onClick={() => handleTagClick(job.role)}>
           {job.role}
         </span>

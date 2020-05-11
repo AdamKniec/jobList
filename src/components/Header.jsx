@@ -19,7 +19,7 @@ const Header = ({ filters, handleRemove, removeAll }) => {
             </div>
           );
         })}
-        <span className="clearAll" onClick={removeAll}>
+        <span className="clear-all" onClick={removeAll}>
           Clear
         </span>
       </div>
