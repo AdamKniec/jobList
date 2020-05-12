@@ -2,16 +2,18 @@ import React from "react";
 import "./styles/listItem.scss";
 
 const ListItem = ({ job, handleTagClick }) => {
-  const renderGivenDataAsTabs = (data) => {
-    return job[data]
-      ? job[data].map((tool, i) => {
-          return (
-            <span className="tag" key={i} onClick={() => handleTagClick(tool)}>
-              {tool}
-            </span>
-          );
-        })
-      : "";
+  const renderGivenDataAsTabs = () => {
+    let techStack =
+      job.languages && job.tools
+        ? job.languages.concat(job.tools)
+        : job.languages || job.tools;
+    return techStack.map((tool, i) => {
+      return (
+        <span className="tag" key={i} onClick={() => handleTagClick(tool)}>
+          {tool}
+        </span>
+      );
+    });
   };
 
   return (
@@ -39,8 +41,7 @@ const ListItem = ({ job, handleTagClick }) => {
         <span className="tag" onClick={() => handleTagClick(job.level)}>
           {job.level}
         </span>
-        {renderGivenDataAsTabs("tools")}
-        {renderGivenDataAsTabs("languages")}
+        {renderGivenDataAsTabs()}
       </div>
     </li>
   );
