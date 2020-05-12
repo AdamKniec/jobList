@@ -11,9 +11,12 @@ const Header = ({ filters, handleRemove, removeAll }) => {
       >
         {filters.map((elem) => {
           return (
-            <div>
+            <div className="header-filter">
               <span className="tag">{elem}</span>
-              <button onClick={() => handleRemove(elem)}>
+              <button
+                onClick={() => handleRemove(elem)}
+                className="delete-button"
+              >
                 <img src="../images/icon-remove.svg" alt="" />
               </button>
             </div>

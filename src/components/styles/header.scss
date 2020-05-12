@@ -18,7 +18,7 @@
     align-items: center;
     flex-wrap: wrap;
     padding: 20px 45px 10px 20px;
-    div {
+    .header-filter {
       display: flex;
       margin-bottom: 10px;
 
@@ -30,7 +30,7 @@
         border-radius: 5px 0px 0 5px;
         font-family: Spartan-Bold;
       }
-      button {
+      .delete-button {
         background-color: $dark-green;
         color: $white;
         border-radius: 0 5px 5px 0;
