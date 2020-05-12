@@ -1,6 +1,10 @@
 # Frontend Mentor - Job Listings Challenge
 
-![Design preview for the Job Listings coding challenge](./design/desktop-preview.jpg)
+FrontEnd Mentor challange created by @Adam Kniec
+Live version of the site available here: https://frosty-yonath-185edc.netlify.app/
+Technologies used:
+- React (hooks)
+- SCSS (mixins)
 
 ## Welcome! 👋
 
