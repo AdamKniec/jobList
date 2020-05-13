@@ -48,5 +48,3 @@ const JobBoard = () => {
 };
 
 export default JobBoard;
-
-// to do - sensowne nazwy dla propsow itp
