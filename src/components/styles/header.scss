@@ -40,6 +40,9 @@
         justify-content: center;
         margin-right: 15px;
         padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         &:hover {
           background-color: $black;
           cursor: pointer;
